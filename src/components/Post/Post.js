@@ -6,13 +6,13 @@ const Post = ({post}) => {
     const {id, title, body} = post;
     const navigate = useNavigate();
     const handleNavigate = ()=>{
-        navigate(`/post/${id}`);
+        navigate(`/posts/${id}`);
     }
     return (
         <div className='post'>
             <p>{title}</p>
             <p><small>{body}</small></p>
-            <Link to={`/post/${id}`}><button>Show Details</button></Link>
+            <Link to={`/posts/${id}`}><button>Show Details</button></Link>
             <button onClick={handleNavigate}>Show Details2</button>
         </div>
     );
